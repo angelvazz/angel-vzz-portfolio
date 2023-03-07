@@ -1,0 +1,46 @@
+.NavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  max-height: 100px;
+  position: sticky;
+  top: 0;
+  max-width: 80%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  filter: invert(1);
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+}
+
+/* mobile */
+
+@media screen and (min-width: 500px) {
+  .NavBar {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .NavBar {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 2000px) {
+  .NavBar {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}

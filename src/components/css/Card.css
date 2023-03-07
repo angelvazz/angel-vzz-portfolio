@@ -1,0 +1,56 @@
+.cards-container {
+  overflow-y: scroll;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 150px;
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    #ff9d2f,
+    #ff6126,
+    #d14b6c,
+    #945881,
+    #507098,
+    #007399,
+    #2f8dbe,
+    #35a7ff,
+    #757f9a,
+    #b224ef,
+    #757f9a,
+    #35a7ff
+  );
+  z-index: -1;
+  background-size: 400%;
+  filter: blur(5px);
+  animation: glowing 15s ease-in-out infinite;
+}
