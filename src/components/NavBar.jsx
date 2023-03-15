@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import './css/NavBar.css';
 import { ButtonNeon } from './Button';
+import './css/NavBar.css';
+import { Burger } from './Burger';
 
 export function NavBar() {
   useEffect(() => {
@@ -15,16 +16,18 @@ export function NavBar() {
   }, []);
   return (
     <div className="NavBar" id="navbar">
-      <div>
+      <div className="NavBarInner">
         <img className="logo" src="src/assets/firma_AVzz.png" />
-      </div>
-      <div className="nav-links">
-        <a>Home</a>
-        <a>Skills</a>
-        <a>Projects</a>
-      </div>
-      <div className="boton-connect">
-        <ButtonNeon text="Connect" />
+        <div className="nav-links">
+          <a>Home</a>
+          <a>Skills</a>
+          <a>Projects</a>
+        </div>
+        <div className="boton-connect">
+          <ButtonNeon text="Connect" />
+        </div>
+
+        <Burger />
       </div>
     </div>
   );

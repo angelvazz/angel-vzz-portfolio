@@ -1,0 +1,78 @@
+.CustomBurger {
+  display: none;
+  z-index: 9999;
+}
+
+@media (max-width: 1024px) {
+  .CustomBurger {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  overflow: hidden;
+  z-index: 11;
+  transform-origin: top right;
+}
+
+.burger-button {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  z-index: 12;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-button span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: hsl(0, 0%, 18%);
+  margin: 2px 0;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+  gap: 1rem;
+  color: #000;
+  margin-right: 50px; /* Este margen asegura que el botón no se tape */
+}
+
+.mobile-nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 1024px) {
+  .NavBar .burger-container {
+    display: none;
+  }
+}

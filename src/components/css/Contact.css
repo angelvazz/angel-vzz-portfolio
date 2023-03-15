@@ -1,0 +1,71 @@
+.ContactContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ContactImage {
+  flex: 1;
+  max-width: 30%;
+  height: auto;
+  background-image: url('src/assets/javascript.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.ContactForm {
+  flex: 1;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.ContactForm input[type='text'],
+.ContactForm input[type='email'],
+.ContactForm textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.ContactFormField {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.ContactFormField label {
+  position: absolute;
+  left: 0.5rem;
+  top: 1rem;
+  font-size: 1rem;
+  color: #999;
+  padding: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+  text-shadow: none;
+}
+
+.ContactFormField input:focus + label,
+.ContactFormField textarea:focus + label,
+.ContactFormField input:not(:placeholder-shown) + label,
+.ContactFormField textarea:not(:placeholder-shown) + label {
+  top: -0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: -1px -1px 0 rgb(60, 0, 255),
+    /* Color del delineado (rojo en este caso) */ 1px -1px 0 rgb(1, 1, 179),
+    -1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(5, 5, 5);
+}
+
+.ContactForm button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}

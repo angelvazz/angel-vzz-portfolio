@@ -6,9 +6,18 @@
   max-height: 100px;
   position: sticky;
   top: 0;
-  max-width: 80%;
+  width: 100%;
   margin: 0 auto;
-  z-index: 1;
+  z-index: 12;
+}
+
+.NavBarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .logo {
@@ -16,31 +25,28 @@
   height: 100px;
   filter: invert(1);
 }
+
 .nav-links {
   display: flex;
   justify-content: space-around;
   width: 200px;
 }
 
-/* mobile */
+.boton-connect {
+  display: none;
+}
 
-@media screen and (min-width: 500px) {
-  .NavBar {
-    max-width: 100%;
-    margin: 0 auto;
+/* Mostrar el botón 'Connect' en pantallas grandes y ocultar el componente 'Burger' */
+@media screen and (min-width: 1024px) {
+  .boton-connect {
+    display: block;
   }
 }
 
-/* Laptop */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .NavBar {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 1280px) and (max-width: 2000px) {
-  .NavBar {
-    max-width: 80%;
-    margin: 0 auto;
+/* Mostrar el componente 'CustomBurger' en pantallas pequeñas y ocultar el botón 'Connect' */
+@media screen and (max-width: 1023px) {
+  .boton-connect,
+  .nav-links {
+    display: none;
   }
 }

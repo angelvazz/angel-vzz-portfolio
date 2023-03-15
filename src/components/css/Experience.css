@@ -1,0 +1,59 @@
+.TimelineContainer {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 120%;
+  background-color: white;
+}
+
+.Job {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.Job:nth-child(even) .JobLabel {
+  align-self: center;
+  margin-right: 35rem;
+}
+
+.Job:nth-child(odd) .JobLabel {
+  align-self: center;
+  margin-left: 35rem;
+}
+
+.JobPoint {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -6px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.JobLabel {
+  position: relative;
+  margin-top: 0px;
+  background-color: white;
+  padding: 1rem;
+  min-height: 250px;
+  min-width: 500px;
+  border-radius: 5px;
+  z-index: 0;
+}

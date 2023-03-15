@@ -1,4 +1,4 @@
-button {
+.button-neon {
   background: black;
   cursor: pointer;
   border: none;
@@ -9,7 +9,7 @@ button {
   border-radius: 12px;
 }
 
-button::before {
+button-neon::before {
   content: '';
   position: absolute;
   top: 0;
